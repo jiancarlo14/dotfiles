@@ -1,3 +1,4 @@
+set -o vi
 export PATH="$HOME/.cargo/bin:$PATH"
 
 # Enable Powerlevel10k instant prompt. Should stay close to the top of ~/.zshrc.
