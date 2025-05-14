@@ -6,6 +6,7 @@ return {
         conform.setup({
             formatters_by_ft = {
                 tex = { "tex-fmt" },
+                lua = { "stylua" }
             },
         })
         vim.api.nvim_create_autocmd("BufWritePre", {

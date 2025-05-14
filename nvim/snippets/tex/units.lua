@@ -12,10 +12,14 @@ local function in_unit()
 	return false
 end
 
+local function math()
+	return vim.api.nvim_eval("vimtex#syntax#in_mathzone()") == 1
+end
+
 return {
 
 	s(
-		{ trig = "pu", snippetType = "autosnippet", regTrig = true, wordTrig = false },
+		{ trig = "pu", snippetType = "autosnippet", regTrig = true, wordTrig = false, condition= math },
 		fmta(
 			[[
     <>\unit{<>}<>

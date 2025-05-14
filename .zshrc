@@ -1,5 +1,7 @@
-set -o vi
+# set -o vi
 export PATH="$HOME/.cargo/bin:$PATH"
+export PATH="$HOME/../usr/share/texlive/2025/texmf-dist/tex/latex:$PATH"
+export PATH="$HOME/.local/scripts:$PATH"
 
 # Enable Powerlevel10k instant prompt. Should stay close to the top of ~/.zshrc.
 # Initialization code that may require console input (password prompts, [y/n]
@@ -37,7 +39,7 @@ autoload -U compinit && compinit
 
 # keybindings
 bindkey -e
-# bindkey -v
+bindkey -v
 bindkey '^p' history-search-backward
 bindkey '^n' history-search-forward
 bindkey '^[w' kill-region
@@ -73,3 +75,5 @@ eval "$(zoxide init --cmd cd zsh)"
 
 # To customize prompt, run `p10k configure` or edit ~/.p10k.zsh.
 [[ ! -f ~/.p10k.zsh ]] || source ~/.p10k.zsh
+
+bindkey -s ^f "tmux-sessionizer\n"
